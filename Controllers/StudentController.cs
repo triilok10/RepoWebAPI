@@ -26,5 +26,13 @@ namespace WebAPI.Controllers
             return result;
         }
         #endregion
+
+
+        [HttpGet]
+        public async Task<MasterListResponse> GetAllStudents()
+        {
+            var result = await _iStudent.GetAllStudents();
+            return result;
+        }
     }
 }
