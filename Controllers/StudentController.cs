@@ -34,5 +34,12 @@ namespace WebAPI.Controllers
             var result = await _iStudent.GetAllStudents();
             return result;
         }
+
+        [HttpGet]
+        public async Task<StudentModel> GetRecord(int studentID)
+        {
+            var result = await _iStudent.GetRecord(studentID);
+            return result;
+        }
     }
 }
