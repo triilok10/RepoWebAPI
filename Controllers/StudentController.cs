@@ -41,5 +41,12 @@ namespace WebAPI.Controllers
             var result = await _iStudent.GetRecord(studentID);
             return result;
         }
+
+        [HttpDelete]
+        public async Task<MasterResponse> DeleteStudent(int StudentID)
+        {
+            var result = await _iStudent.DeleteStudent(StudentID);
+            return result;
+        }
     }
 }
